@@ -1,0 +1,13 @@
+version: '3'
+services:
+  gitdeps:
+    image: static:latest
+    build: ./
+    #restart: always
+    container_name: static
+    hostname: static
+    privileged: true
+    ports:
+      - '80:80'
+    volumes:
+      - '/tmp/nil:/tmp/nil'
